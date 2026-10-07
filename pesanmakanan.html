@@ -1,0 +1,48 @@
+<!doctype html><html lang="id"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Warung Nusa • Food & Drinks</title><meta name="description" content="Pesan makanan dan minuman Warung Nusa. Antar ke Rental PS 3, PS 4, dan Bioskop Mini.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pesanmakanan.css"></head><body>
+<div class="top">🍜 WARUNG NUSA <span>•</span> Pesan dari tempat main, kami antar ke kamu!</div>
+<header><a class="brand" href="#home">🍜 <span><b>Warung Nusa</b><small>Food • Drink • Snack</small></span></a>
+<nav><a href="#menu">Menu</a><a href="#tentang">Tentang</a><a href="#pembayaran">Pembayaran</a><button id="cartBtn">🛒 Keranjang <b id="cartCount">0</b></button></nav></header>
+<main id="home">
+<section class="hero"><div><label>🔥 LAPAR SAAT NGE-GAME ATAU NONTON?</label><h1>Makan enak,<br><em>nggak perlu keluar.</em></h1>
+<p>Pilih makanan, minuman, dan snack favoritmu. Kami antar langsung ke Rental PS 3, PS 4, atau ruangan Bioskop Mini.</p>
+<div class="actions"><a href="#menu" class="btn primary">🍽️ Lihat 98 Menu</a><a href="#tentang" class="btn ghost">Tentang Warung</a></div>
+<div class="stats"><div><strong>98</strong><small>Menu</small></div><div><strong>📶</strong><small>Free WiFi</small></div><div><strong>🚴</strong><small>Antar Lokasi</small></div></div></div>
+<div class="hero-card"><div>🍛</div><section><small>MENU FAVORIT</small><b>Nasi Ayam Geprek</b><span>Pedas • Gurih • Mantap</span></section><strong>Rp11K</strong></div></section>
+
+<section class="section" id="menu"><div class="section-head"><div><label>MENU WARUNG</label><h2>98 pilihan buat nemenin waktumu</h2></div>
+<div class="search">🔎 <input id="search" placeholder="Cari makanan atau minuman..."></div></div><div id="filters" class="filters"></div>
+<div id="menuGrid" class="grid"></div><div id="empty" class="empty hidden">😕 Menu tidak ditemukan.</div></section>
+
+<section class="features"><div>🚴<b>Antar ke lokasi</b><small>Rental PS 3, PS 4 & Bioskop Mini</small></div><div>⚡<b>Pesan cepat</b><small>Order dikirim ke WhatsApp penjual</small></div><div>📶<b>Free WiFi</b><small>Password bisa ditanyakan ke admin</small></div><div>💳<b>Pembayaran fleksibel</b><small>QRIS • E-Wallet • Bank</small></div></section>
+
+<section class="section about" id="tentang"><div><label>TENTANG TOKO</label><h2>Teman lapar saat seru-seruan.</h2><p>Warung Nusa menyediakan makanan rumahan, minuman segar, dan snack untuk menemani gaming, nonton, atau nongkrong. Pesanan dapat diarahkan ke Rental PS 3/PS 4 atau ruangan Bioskop Mini.</p></div>
+<div class="wifi"><span>📶</span><h3>Free WiFi</h3><p>Password WiFi tersedia dari admin.</p><button class="btn ghost" onclick="alert('Silakan tanyakan password WiFi kepada admin di lokasi.')">Minta Password</button></div></section>
+
+<section class="section pay" id="pembayaran"><label>PEMBAYARAN</label><h2>Pilih metode pembayaran</h2><div class="paygrid">
+<div><b>📱 QRIS</b><small>Scan QRIS toko saat pembayaran.</small><strong>MINTA KE ADMIN</strong></div>
+<div><b>💚 DANA</b><small>Nomor e-wallet</small><strong id="dana">08XX-XXXX-XXXX</strong></div>
+<div><b>🟢 GoPay</b><small>Nomor e-wallet</small><strong id="gopay">08XX-XXXX-XXXX</strong></div>
+<div><b>🟢 SHOPEEPAY</b><small>Nomor e-wallet</small><strong id="shopeepay5">08XX-XXXX-XXXX</strong></div>
+<div><b>🏦 SEABANK</b><small>Nomor rekening</small><strong id="bca">XXXX-XXXX-XX</strong></div>
+<div><b>🏦 JAGO</b><small>Nomor rekening</small><strong id="bri">XXXX-XXXX-XX</strong></div></div></section>
+</main><footer><div><b>🍜 Warung Nusa</b><small>Enak, praktis, langsung ke tempat kamu.</small></div><span>© 2026 Warung Nusa</span></footer>
+
+<aside id="drawer"><div class="drawer-head"><h2>🛒 Keranjang</h2><button id="closeCart">×</button></div><div id="cartItems"></div>
+<div class="summary"><div>Total <strong id="cartTotal">Rp0</strong></div><button id="checkoutBtn" class="btn primary full">Lanjut Isi Data & Pesan</button></div></aside><div id="overlay"></div>
+
+<div id="modal" class="backdrop"><div class="modal"><button id="closeModal" class="x">×</button><label>CHECKOUT</label><h2>Data pengantaran</h2><p>Isi data agar pesanan bisa diproses dan kamu mudah dihubungi.</p>
+<form id="checkoutForm"><div class="formgrid">
+<label>Nama lengkap<input required name="name" placeholder="Nama kamu"></label><label>Umur<input required name="age" type="number" min="1" max="120" placeholder="Umur"></label>
+<label>Gmail<input required name="email" type="email" placeholder="nama@gmail.com"></label><label>WhatsApp pembeli<input required name="phone" placeholder="08xxxxxxxxxx"></label>
+<label>Lokasi antar<select required name="location"><option value="">Pilih lokasi</option><option>Rental PS 3</option><option>Rental PS 4</option><option>Bioskop Mini</option><option>Lokasi lainnya</option></select></label>
+<label>Nomor ruangan / meja<input required name="room" placeholder="Contoh: Room 2 / Meja 5"></label>
+<label class="wide">Metode pembayaran<select required name="payment"><option value="">Pilih pembayaran</option><option>QRIS</option><option>DANA</option><option>GoPay</option><option>BCA</option><option>BRI</option><option>Bayar di tempat / konfirmasi admin</option></select></label>
+<label class="wide">Catatan<textarea name="note" rows="3" placeholder="Contoh: sambal banyak, antar setelah match selesai..."></textarea></label></div>
+<div class="checkout-total">Total pesanan <strong id="checkoutTotal">Rp0</strong></div><button class="btn primary full" type="submit">💬 Pesan via WhatsApp</button>
+<small class="note">Pesanan dibuka ke WhatsApp PENJUAL yang diatur di app.js.</small></form></div></div><div id="toast"></div>
+<script src="pesanmakanan.js"></script></body></html>
